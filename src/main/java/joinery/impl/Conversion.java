@@ -172,7 +172,7 @@ public class Conversion {
 
     public static <V> double[][] toModelMatrix(final DataFrame<V> df, double fillValue, 
             DataFrame<Object> template, boolean addIntercept, Map<String, String> factorReferences) {
-        return toModelMatrixDataFrame(df, template, addIntercept, null, null).fillna(fillValue).toArray(double[][].class);
+        return toModelMatrixDataFrame(df, template, addIntercept, factorReferences, null).fillna(fillValue).toArray(double[][].class);
     }
 
     public static <V> DataFrame<Number> toModelMatrixDataFrame(final DataFrame<V> df) {
